@@ -27,6 +27,9 @@ typedef NS_ENUM(NSUInteger, SVPullToRefreshPosition) {
 @property (nonatomic, strong, readonly) SVPullToRefreshView *pullToRefreshView;
 @property (nonatomic, assign) BOOL showsPullToRefresh;
 
+@property (nonatomic, strong, readonly) SVPullToRefreshView *pullUpToRefreshView;
+@property (nonatomic, assign) BOOL showsPullUpToRefresh;
+
 @end
 
 
