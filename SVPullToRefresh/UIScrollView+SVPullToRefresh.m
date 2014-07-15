@@ -653,7 +653,16 @@ static char UIScrollViewPullUpToRefreshView;
 #pragma mark -
 
 - (void)triggerRefresh {
-    [self.scrollView triggerPullToRefresh];
+    switch (self.position) {
+        case SVPullToRefreshPositionTop:
+            [self.scrollView triggerPullToRefresh];
+            break;
+        case SVPullToRefreshPositionBottom:
+            [self.scrollView triggerPullUpToRefresh];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)startAnimating{
